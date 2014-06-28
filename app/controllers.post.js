@@ -1,7 +1,6 @@
 angular.module('LouisApp.controllers.post', [])
 
-    .controller('PostListCtrl', ['$scope', 'PostsFactory', 'PostFactory', '$location',
-        function ($scope, PostsFactory, PostFactory, $location) {
+    .controller('PostListCtrl', function ($scope, PostsFactory, PostFactory, $location, LocalPostStorage) {
 
             $scope.edit = function (id) {
                 $location.path('/post/' + id);
@@ -23,27 +22,39 @@ angular.module('LouisApp.controllers.post', [])
                 $scope.posts = PostsFactory.all();
             };
 
-            $scope.posts = PostsFactory.all();
-        }])
+            $scope.posts = PostsFactory.all(function(){
+                LocalPostStorage.tagCached($scope.posts);
+            });
+        })
 
-    .controller('PostDetailCtrl', ['$scope', '$routeParams', 'PostFactory', '$location',
-        function ($scope, $routeParams, PostFactory, $location) {
+    .controller('PostDetailCtrl', function ($scope, $routeParams, PostFactory, $location, LocalPostStorage) {
+
+            LocalPostStorage.init($scope);
 
             $scope.save = function () {
+                delete $scope.post.dirty;
+                LocalPostStorage.remove($scope.post.id);
                 PostFactory.update($scope.post, function () {
                     $location.path('/post');
                 });
             };
 
             $scope.cancel = function () {
-                $location.path('/post');
+                LocalPostStorage.remove($scope.post.id, function () {
+                    $location.path('/post');
+                });
             };
 
-            $scope.post = PostFactory.show({id: $routeParams.id});
-        }])
+            // get data from cache
+            $scope.post = LocalPostStorage.get($routeParams.id);
 
-    .controller('PostCreationCtrl', ['$scope', 'PostsFactory', '$location',
-        function ($scope, PostsFactory, $location) {
+            if($scope.post == undefined) {
+                //get data form REST
+                $scope.post = PostFactory.show({id: $routeParams.id});
+            }
+        })
+
+    .controller('PostCreationCtrl', function ($scope, PostsFactory, $location) {
 
             $scope.save = function () {
                 $scope.post.id = new Date().getTime();
@@ -56,5 +67,5 @@ angular.module('LouisApp.controllers.post', [])
                 $location.path('/post');
             };
 
-        }])
+        })
 ;

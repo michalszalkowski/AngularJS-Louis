@@ -10,7 +10,7 @@
 			<h3 class="panel-title">
 				{{post.name ? post.name : "Post"}}
 
-				<span ng-show="postform.$dirty" class="glyphicon glyphicon-asterisk text-danger"></span>
+				<span ng-show="postform.$dirty || post.dirty" class="glyphicon glyphicon-asterisk text-danger"></span>
 			</h3>
 		</div>
 		<div class="panel-body">

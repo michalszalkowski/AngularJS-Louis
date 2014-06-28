@@ -5,6 +5,7 @@ var louisApp = angular.module('louisApp',
         'LouisApp.controllers.home',
         'LouisApp.controllers.post',
         'LouisApp.factory',
+        'LouisApp.service',
 
         'ngRoute'
     ])
@@ -16,5 +17,6 @@ louisApp.config(function ($routeProvider) {
         when('/post', {templateUrl: 'app/tpl/post/list.tpl.html', controller: 'PostListCtrl'}).
         when('/post/:id', {templateUrl: 'app/tpl/post/form.tpl.html', controller: 'PostDetailCtrl'}).
         when('/post-new', {templateUrl: 'app/tpl/post/form.tpl.html', controller: 'PostCreationCtrl'}).
+        when('/unsaved', {templateUrl: 'app/tpl/unsaved.tpl.html', controller: 'UnSavedCtrl'}).
         otherwise({redirectTo: '/'});
 });
