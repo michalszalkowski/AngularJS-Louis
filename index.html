@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="louisApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+	<title>Louis Btbw</title>
+
+	<link href="lib/bootstrap/css/bootstrap.min-dark.css" rel="stylesheet">
+	<link href="app/css/main.css" rel="stylesheet">
+	<link href="app/css/button.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+
+<div id="main">
+
+	<div id="header">
+		<span class="logo"><span class="glyphicon glyphicon-fire"></span> Louis <span class="btbw">Btbw</span></span>
+	</div>
+
+	<div id="sidebar">
+		<ul class="sidebar-menu">
+			<li><a href="#"><span class="glyphicon glyphicon-calendar"></span>  Dashboard</a></li>
+			<li><a href="#/post" class="active"><span class="glyphicon glyphicon-book"></span>  Post</a></li>
+		</ul>
+	</div>
+
+	<div id="center">
+		<div class="container"><section ng-view></section></div>
+	</div>
+</div>
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js "></script>
+
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular/angular-route.min.js"></script>
+<script src="lib/angular/angular-resource.min.js"></script>
+
+<script src="app/app.js"></script>
+
+<script src="app/controllers.post.js"></script>
+<script src="app/controllers.home.js"></script>
+<script src="app/factory.js"></script>
+
+</body>
+</html>
