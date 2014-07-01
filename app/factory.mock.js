@@ -39,7 +39,7 @@ angular.module('LouisApp.factory', [])
 		};
 
 		this.create = function () {
-			alert('This is mock.');
+			alert('This is mock. You cannot create new object.');
 		};
 	})
 
@@ -49,11 +49,11 @@ angular.module('LouisApp.factory', [])
 		};
 
 		this.update = function () {
-			alert('This is mock.');
+			alert("This is mock. You cannot update this object");
 		};
 
 		this.delete = function () {
-			alert('This is mock.');
+			alert('This is mock. You cannot delete this object');
 		};
 	})
 ;
