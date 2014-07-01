@@ -22,9 +22,14 @@ angular.module('LouisApp.controllers.post', [])
 			$scope.posts = PostsFactory.all();
 		};
 
-		$scope.posts = PostsFactory.all(function () {
-			LocalPostStorage.tagCached($scope.posts);
-		});
+		// REAL API
+//		$scope.posts = PostsFactory.all(function () {
+//			LocalPostStorage.tagCached($scope.posts);
+//		});
+
+		// MOCK API
+		$scope.posts = PostsFactory.all();
+		LocalPostStorage.tagCached($scope.posts)
 	})
 
 	.controller('PostDetailCtrl', function ($scope, $routeParams, PostFactory, $location, LocalPostStorage) {
