@@ -3,6 +3,16 @@ angular.module('LouisApp.controllers.home', [])
 	.controller('HomeCtrl', function ($scope, $http) {
 	})
 
+	.controller('MenuCtrl', function ($scope, $location) {
+		$scope.getClass = function (path) {
+			if ($location.path().substr(0, path.length) == path) {
+				return "active"
+			} else {
+				return ""
+			}
+		}
+	})
+
 	.controller('UnSavedCtrl', function ($scope, $http, $location, LocalPostStorage) {
 
 		$scope.posts = LocalPostStorage.getAll();
