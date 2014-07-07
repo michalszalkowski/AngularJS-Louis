@@ -1,4 +1,4 @@
-angular.module('LouisApp.controllers.post', [])
+angular.module('LouisApp.controller.post', [])
 
 	.controller('PostListCtrl', function ($scope, PostsFactory, PostFactory, $location, LocalPostStorage) {
 

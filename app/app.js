@@ -2,9 +2,9 @@ var BACKEND_URL = "http://localhost:8080/app";
 
 var louisApp = angular.module('louisApp',
 	[
-		'LouisApp.controllers.home',
-		'LouisApp.controllers.post',
-		'LouisApp.controllers.splitter',
+		'LouisApp.controller.home',
+		'LouisApp.controller.post',
+		'LouisApp.controller.splitter',
 		'LouisApp.factory',
 		'LouisApp.service',
 

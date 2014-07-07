@@ -1,4 +1,4 @@
-angular.module('LouisApp.controllers.splitter', [])
+angular.module('LouisApp.controller.splitter', [])
 
 	.controller('SplitterCtrl', function ($scope, $http) {
 

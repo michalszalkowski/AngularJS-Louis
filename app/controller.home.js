@@ -1,4 +1,4 @@
-angular.module('LouisApp.controllers.home', [])
+angular.module('LouisApp.controller.home', [])
 
 	.controller('HomeCtrl', function ($scope, $http) {
 	})
