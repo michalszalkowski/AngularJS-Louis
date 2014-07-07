@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"title": "Wizard Step 1",
+		"fields": [
+			{
+				"type": "text",
+				"name": "username",
+				"label": "User name"
+			},
+			{
+				"type": "password",
+				"name": "address",
+				"label": "Password"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"title": "Wizard Step 2",
+		"fields": [
+			{
+				"type": "text",
+				"name": "city",
+				"label": "City"
+			},
+			{
+				"type": "text",
+				"name": "street",
+				"label": "Street"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"title": "Wizard Step 3",
+		"fields": [
+			{
+				"type": "text",
+				"name": "lorem",
+				"label": "Lorem"
+			},
+			{
+				"type": "text",
+				"name": "ipsum",
+				"label": "Ipsum"
+			}
+		]
+	}
+]

@@ -1,0 +1,18 @@
+<section ng-repeat="card in wizard" ng-show="card.isShow">
+
+	<h1>{{card.title}}</h1>
+
+	<div class="form-group" ng-repeat="field in card.fields">
+		<label>{{field.label}}</label>
+		<input type="{{field.type}}" ng-model="wizardForm[field.name]" class="form-control"/>
+	</div>
+
+</section>
+
+
+<a ng-repeat="card in wizard" ng-click="show(card)" class="btn btn-sm btn-default">
+	<span class="glyphicon glyphicon-tasks"></span>
+	Show card {{$index}}
+</a>
+
+<pre>{{wizardForm | json}}</pre>

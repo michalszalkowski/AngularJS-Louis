@@ -8,6 +8,8 @@ var louisApp = angular.module('louisApp',
 		'LouisApp.factory',
 		'LouisApp.service',
 
+		'LouisApp.module.wizard',
+
 		'ngRoute'
 	])
 
@@ -20,5 +22,6 @@ louisApp.config(function ($routeProvider) {
 		when('/post-new', {templateUrl: 'app/tpl/post/form.tpl.html', controller: 'PostCreationCtrl'}).
 		when('/unsaved', {templateUrl: 'app/tpl/unsaved.tpl.html', controller: 'UnSavedCtrl'}).
 		when('/splitter', {templateUrl: 'app/tpl/splitter.tpl.html', controller: 'SplitterCtrl'}).
+		when('/module/wizard', {templateUrl: 'app/tpl/page.tpl.html', controller: 'PageCtrl'}).
 		otherwise({redirectTo: '/dashboard'});
 });
