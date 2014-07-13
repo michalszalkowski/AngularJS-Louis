@@ -1,0 +1,21 @@
+<div class="panel panel-default" ng-init="add = false">
+
+	<div class="panel-heading">
+		<h3 class="panel-title">Comments</h3>
+		<div class="panel-action">
+			<button ng-show="!add" ng-click="add = !add" class="btn btn-sm btn-success pull-right"><span class="glyphicon glyphicon-leaf"></span> Add</button>
+			<button ng-show="add" ng-click="add = !add; addComment();" class="btn btn-sm btn-success pull-right"><span class="glyphicon glyphicon-leaf"></span> Save</button>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div ng-repeat="comment in comments"><b>{{$index+1}}</b> {{comment.comment}}</div>
+		<form>
+			<div ng-show="add" class="form-group">
+				<label>New</label>
+				<textarea class="form-control" ng-model="commentform.new" rows="3"></textarea>
+			</div>
+		</form>
+
+	</div>
+</div>

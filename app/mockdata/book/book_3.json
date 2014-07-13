@@ -1,0 +1,15 @@
+{
+	"book":{
+		"id": 3,
+		"name": "Lorem ipsum 3"
+	},
+	"author":{
+		"name":"LoremE",
+		"surname":" IpsumF"
+	},
+	"comments":[
+		{"id":1,"comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.e1"},
+		{"id":2,"comment":"Mauris varius lacus nec lacus venenatis rutrum.e2"},
+		{"id":3,"comment":"In auctor id eros in dignissim.e3"}
+	]
+}

@@ -1,0 +1,24 @@
+<h1>Books</h1>
+<div class="row">
+	<div class="col-xs-4">
+		<div class="panel panel-default">
+
+			<div class="panel-heading">
+				<h3 class="panel-title">Books</h3>
+			</div>
+
+			<div class="panel-body">
+
+				<div class="list-group">
+					<a ng-repeat="item in books" ng-click="details(item.id)" class="list-group-item">{{item.name}}</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-8">
+		<div ng-include src="'app/tpl/book/book_details.tpl.html'"></div>
+		<div ng-include src="'app/tpl/book/book_author.tpl.html'"></div>
+		<div ng-include src="'app/tpl/book/book_comments.tpl.html'"></div>
+	</div>
+</div>

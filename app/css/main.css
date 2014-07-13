@@ -79,3 +79,12 @@ body {
 	color: #fff;
 	background-color: #BFBFBF;
 }
+
+.panel-action {
+	float: right;
+	margin-top: -10px;
+}
+
+.list-group a {
+	cursor: pointer;
+}

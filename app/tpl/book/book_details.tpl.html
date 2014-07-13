@@ -1,0 +1,26 @@
+<div class="panel panel-default" ng-init="edit = false">
+
+	<div class="panel-heading">
+		<h3 class="panel-title">Details</h3>
+
+		<div class="panel-action">
+			<button ng-show="!edit" ng-click="edit = !edit" class="btn btn-sm btn-success pull-right"><span
+					class="glyphicon glyphicon-pencil"></span> Edit
+			</button>
+			<button ng-show="edit" ng-click="edit = !edit; saveDetails()" class="btn btn-sm btn-success pull-right"><span
+					class="glyphicon glyphicon-pencil"></span> Save
+			</button>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<form novalidate class="simple-form">
+			<div class="form-group">
+				<label>Name</label>
+				<input ng-show="edit" type="text" class="form-control" ng-model="book.name">
+				<p ng-show="!edit">{{book.name}}</p>
+			</div>
+		</form>
+
+	</div>
+</div>
