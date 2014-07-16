@@ -1,0 +1,22 @@
+{
+	"config": {
+		"headers": ["Id", "Geographic area", "Capital"]
+	},
+	"rows": [
+		[1, "Alberta", "Edmonton"],
+		[2, "British Columbia", "Victoria"],
+		[3, "Canada", "Ottawa"],
+		[4, "Manitoba", "Winnipeg" ],
+		[5, "New Brunswick", "Fredericton"],
+		[6, "Newfoundland and Labrador", "St. John's"],
+		[7, "Northwest Territories", "Yellowknife"],
+		[8, "Nova Scotia", "Halifax"],
+		[9, "Nunavt", "Iqaluit"],
+		[10, "Ontario", "Toronto"],
+		[11, "Prince Edward Island", "Charlottetown"],
+		[12, "Quebec", "Quebec City"],
+		[13, "Saskatchewan", "Regina"],
+		[14, "Yukon", "Whitehorse"]
+	]
+}
+

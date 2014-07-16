@@ -6,10 +6,12 @@ var louisApp = angular.module('louisApp',
 		'LouisApp.controller.post',
 		'LouisApp.controller.splitter',
 		'LouisApp.controller.books',
+		'LouisApp.controller.listgrid',
 		'LouisApp.factory',
 		'LouisApp.service',
 
 		'LouisApp.module.wizard',
+		'LouisApp.module.list',
 
 		'ngRoute'
 	])
@@ -25,5 +27,6 @@ louisApp.config(function ($routeProvider) {
 		when('/splitter', {templateUrl: 'app/tpl/splitter.tpl.html', controller: 'SplitterCtrl'}).
 		when('/module/wizard', {templateUrl: 'app/tpl/page.tpl.html', controller: 'PageCtrl'}).
 		when('/books', {templateUrl: 'app/tpl/book/books.tpl.html', controller: 'BooksCtrl'}).
+		when('/listgrid', {templateUrl: 'app/tpl/listgrid/listgrid.tpl.html', controller: 'ListGridCtrl'}).
 		otherwise({redirectTo: '/dashboard'});
 });
