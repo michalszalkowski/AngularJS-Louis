@@ -24,7 +24,7 @@ angular.module('LouisApp.module.wizard', [])
 					card.isShow = true;
 				}
 			},
-			templateUrl: 'app/module/wizard-main-widget.tpl.html'
+			templateUrl: 'app/module/wizard/wizard-main-widget.tpl.html'
 		};
 	})
 ;
