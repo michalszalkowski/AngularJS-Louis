@@ -12,6 +12,7 @@ var louisApp = angular.module('louisApp',
 
 		'LouisApp.module.wizard',
 		'LouisApp.module.list',
+		'LouisApp.module.reload',
 
 		'ngRoute'
 	])
@@ -28,5 +29,6 @@ louisApp.config(function ($routeProvider) {
 		when('/module/wizard', {templateUrl: 'app/tpl/page.tpl.html', controller: 'PageCtrl'}).
 		when('/books', {templateUrl: 'app/tpl/book/books.tpl.html', controller: 'BooksCtrl'}).
 		when('/listgrid', {templateUrl: 'app/tpl/listgrid/listgrid.tpl.html', controller: 'ListGridCtrl'}).
+		when('/reload', {templateUrl: 'app/tpl/page2.tpl.html', controller: 'Page2Ctrl'}).
 		otherwise({redirectTo: '/dashboard'});
 });

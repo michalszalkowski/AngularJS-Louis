@@ -3,8 +3,12 @@ angular.module('LouisApp.controller.home', [])
 	.controller('HomeCtrl', function ($scope, $http) {
 	})
 
-	.controller('PageCtrl', function ($scope, $http) {
+	.controller('PageCtrl', function ($scope) {
 		$scope.pageTitle = "Wizard";
+	})
+
+	.controller('Page2Ctrl', function ($scope) {
+		$scope.pageTitle = "Reload";
 	})
 
 	.controller('MenuCtrl', function ($scope, $location) {
